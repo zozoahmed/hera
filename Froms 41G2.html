@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Forms</title>
+	</head>
+
+	<body>
+		<form action="complete.html" method="GET">
+			<input type="hidden" name="ID" value="1">
+
+			<label for="fn">First Name: </label>
+			<input type="text" name="fname" id="fn" tabindex="1" placeholder="Enter your name" required pattern="[A-Za-z]{3,10}" title="Name must be from 3 to 10 characters">
+			<br><br>
+
+			<label for="BD">Birth date: </label>
+			<input type="Date" name="BD" id="BD" >
+			<br><br>
+
+			<label for="Age">Age </label>
+			<input type="number" name="Age" id="Age" min="18" max="99">
+			<br><br>
+
+			<label for="e">Email </label>
+			<input type="Email" name="e" id="e" autocomplete="off">
+			<br><br>
+
+			<label for="url">Website </label>
+			<input type="url" name="url" id="url" >
+			<br><br>
+
+			<label for="c">Favourite color </label>
+			<input type="color" name="c" id="c" >
+			<br><br>
+
+			<label for="pw">Password: </label>
+			<input type="password" name="pwd" id="pw">
+			<br><br>
+
+			
+
+			<fieldset>
+				<legend>Skills</legend>
+				<input type="checkbox" id="c1" name="c1" value="1"> <label for="c1">HTML</label><br>
+				<input type="checkbox" id="c2" name="c2" value="2" checked> <label for="c2">CSS</label> <br>
+				<input type="checkbox" id="c3" name="c3" value="3"> <label for="c3">JS</label> <br>
+			</fieldset>
+
+			<label>Gender</label><br>
+			<input type="radio" id="r1" name="gen" value="m"> <label for="r1">Male</label><br>
+			<input type="radio" id="r2" name="gen" value="f"> <label for="r1">Female</label><br>
+			<br><br>
+
+			<label for="fac">Faculty</label>
+			<select name="fac" id="fac" multiple tabindex="3">
+				<option value="1">FCI</option>
+				<option value="2" selected>Science</option>
+				<option value="3">Engineering</option>
+			</select>
+			<br><br>
+
+			<label for="img">Profile Picture</label>
+			<input type="file" name="img" id="img">
+			<br><br>
+
+			<label for="about">About you:</label>
+			<textarea name="about" id="about" cols="30" rows="3" tabindex="2"></textarea>
+			<br><br>
+
+			<input type="checkbox" id="EULA" name="EULA" value="1" accesskey="a"> <label for="EULA">I agree on terms and conditions</label><br>
+			<small>Press ALt+a to accept.</small>
+			<br>
+
+			<input type="reset" value="Cancel">
+			<input type="submit" value="Save">
+		</form>
+	</body>
+</html>

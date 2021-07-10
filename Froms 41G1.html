@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Forms</title>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+		content="width=device-width,user-scalable=no,initial-scale=1.8,maxmimum-scale=1.0 ,minimum-scale=1.0
+	      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		  <title>Docoment</title>
+
+	</head>
+
+
+	<body>
+		<form method="post" action="<?= $_SERVER{'PHP_SELF'}?>" enctype="multipart/form-dtat">
+
+			<br><br>
+			<input type="hidden" name="ID" value="1" >
+
+			<label  for="fname">First Name</label>
+			<input id="fname" name="fname" type="text" placeholder="Enter your name" tabindex="1" required pattern="[A-Za-z]{3,20}" title="Name must be only letters from 3 to 20 characters">
+			
+			<br><br>
+			<label  for="Email">Email</label>
+			<input id="Email" name="Email" type="email" autocomplete="off">
+
+			<br><br>
+			<label  for="URL">Your Website</label>
+			<input id="URL" name="URL" type="URL" >
+
+			<br><br>
+			<label  for="BD">Your Birth date</label>
+			<input id="BD" name="BD" type="date" >
+
+			<br><br>
+			<label  for="Age">Your Age</label>
+			<input id="Age" name="Age" type="Number" min="1" max="99" >
+
+			<br><br>
+			<label  for="pwd">Password</label>
+			<input id="pwd" name="pwd" type="password" >
+
+			<br><br>
+			<fieldset>
+				<legend>Select skills</legend>
+				<input type="checkbox" id="ch1" name="ch1" value="1" tabindex="3"> <label for="ch1">HTML</label> <br>
+				<input type="checkbox" id="ch2" name="ch2" value="2" checked> <label for="ch2">CSS</label> <br>
+				<input type="checkbox" id="ch3" name="ch3" value="3"><label for="ch3">JS</label> <br>
+			</fieldset>
+			<br><br>
+			<label>Gender</label><br>
+			<input type="radio" id="r1" name="gender" value="f" > <label for="r1">Male</label> <br>
+			<input type="radio" id="r2" name="gender" value="m" checked> <label for="r2">Female</label> <br>
+
+			<br><br>
+			<label>Marital status</label><br>
+			<input type="radio" id="m1" name="status" value="1" > <label for="m1">Married</label> <br>
+			<input type="radio" id="m2" name="status" value="0" checked> <label for="m2">Not married</label> <br>
+
+			<br><br>
+			<label for="Fac">Faculty</label>
+			<select id="Fac" name="Faculty" multiple tabindex="2">
+				<option value="1" >FCI</option>
+				<option value="2" selected>Science</option>
+				<option value="3">Enginnering</option>
+			</select>
+
+			<br><br>
+			<label for="img">Your profile picture</label>
+			<input type="file" id="img" name="pImage">
+
+			<br><br>
+			<label  for="about">About you</label>
+			<textarea id="about" name="about" cols="40" rows="3"></textarea>
+
+			<br><br>
+			<input type="checkbox" id="EULA" name="EULA" value="EULA" accesskey="a" > <label for="EULA">I accept terms and condition</label> <br>
+			<small>Press Alt+a for accept EULA</small>
+			
+			<br><br>
+			<input type="reset" value="Cancel">
+			<input type="submit" value="Save">
+		</form>
+	</body>
+       <?php
+          $regemail="/^[a-zA-Z]+[a-zA-Z0-9]*\.{0,1}[a-zA-Z0-9]+@([a-zA-Z]+\.)+[a-z]{2,4}$/"
+
+          if(isset($_POST["Email"]))
+          {
+          if(preg_match($regemail ,$_POST["Email"]))
+                     echo "Accepted Email <br>";
+
+
+
+</html>

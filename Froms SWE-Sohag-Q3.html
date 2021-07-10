@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms</title>
+</head>
+
+<body>
+    <form action="complete.html" method="GET">
+        <input type="hidden" id="uID" name="uID" value="1">
+        <div>
+            <label for="uName">Full Name:</label>
+            <input type="text" name="FullName" id="uName" value="" placeholder="Write your name" required autocomplete="off" pattern="[A-Za-z]{3,}" title="You must enter 3 letters or more" tabindex="1">
+            <small>*required</small>
+        </div>
+
+        <div>
+            <label for="uEmail">Email</label>
+            <input type="email" name="Email" id="uEmail">
+        </div>
+
+        <div>
+            <label for="url">Website</label>
+            <input type="url" name="url" id="url">
+        </div>
+
+        <div>
+            <label for="bDate">Birth Date:</label>
+            <input type="date" name="bDate" id="bDate" tabindex="2">
+        </div>
+
+        <div>
+            <label for="age">your Age</label>
+            <input type="number" min="18" max="99" name="age" id="age">
+        </div>
+
+        <div>
+            <label for="uPWD">Password</label>
+            <input type="password" name="pwd" id="uPWD">
+        </div>
+
+        <fieldset>
+            <legend>Your hoppies:</legend>
+            <input type="checkbox" name="programming" id="prog" value="c1">
+            <label for="prog">Programming</label>
+
+            <input type="checkbox" name="reading" id="reading" value="c2">
+            <label for="reading">reading</label>
+
+            <input type="checkbox" name="coding" id="coding" value="c3">
+            <label for="coding">coding</label>
+        </fieldset>
+
+        <div>
+            Gender:
+            <input type="radio" id="male" name="gender" value="m" checked tabindex="3">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="f">
+            <label for="female">female</label>
+        </div>
+
+        <div>
+            Marital status:
+            <input type="radio" id="married" name="mStatus" value="m">
+            <label for="married">Married</label>
+
+            <input type="radio" id="single" name="mStatus" value="s">
+            <label for="single">Single</label>
+        </div>
+        <div>
+            <label for="fac">Faculty</label>
+            <select name="fac" id="fac">
+				<option value="1">FCI</option>
+				<option value="2" selected>Engineering</option>
+				<option value="3">Commerce</option>
+			</select>
+        </div>
+
+        <div>
+            <label for="skills">skills</label>
+            <select name="skills" id="skills" multiple>
+				<option value="1">HTML</option>
+				<option value="2" selected>CSS</option>
+				<option value="3">JavaScript</option>
+			</select>
+        </div>
+
+        <div>
+            <label for="objective">Your Objective:</label>
+            <textarea id="objective" name="objective" rows="3" cols="40">
+
+			</textarea>
+        </div>
+
+        <div>
+            <label for="pic">Profile pic</label>
+            <input type="file" id="pic" name="pic">
+        </div>
+
+        <input type="submit" value="OK">
+        <input type="reset" value="cancel">
+    </form>
+</body>
+
+</html>
